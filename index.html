@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQGmEaoioZ4s_9qlsaZXAJfQ43qH7v2AsrjjFfKqOzJw&s=10j">
+    <title>Nike</title>
+</head>
+<body>
+    <div class="loader-container" id="loader">
+        <div class="loader-content">
+            <div class="nike-loader-logo">NIKE</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="#home">NIKE</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#running">Running</a></li>
+                <li><a href="#basketball">Basketball</a></li>
+                <li><a href="#lifestyle">Lifestyle</a></li>
+                <li><a href="#skateboarding">SB</a></li>
+                <li><a href="#training">Training</a></li>
+                <li><a href="#kids">Kids</a></li>
+                <li><a href="#sale">Sale</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cart-btn">Cart (<span id="cart-count">0</span>)</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero section-box">
+            <div class="hero-content">
+                <span class="hero-subtitle">NEW RELEASE</span>
+                <h1 class="hero-title">NIKE AIR MAX<br><span>FUTURE</span></h1>
+                <p class="hero-desc">Experience the ultimate comfort and futuristic design built for your everyday movement.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="hero-shop-btn">Shop Now</button>
+                    <button class="btn btn-secondary" id="hero-explore-btn">Explore</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="shoe-card-floating">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Nike Shoe">
+                </div>
+            </div>
+        </section>
+
+        <section id="shop" class="products section-box">
+            <div class="shop-header">
+                <h2 class="section-title">All Nike Products</h2>
+                <div class="sort-container">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="default">Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <div class="product-card" data-card-id="1" data-price="150">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80" alt="Nike Air Max">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nike Air Max Red</h3>
+                        <p class="category">Men's Shoes</p>
+                        <div class="product-footer">
+                            <span class="price">$150</span>
+                            <button class="add-to-cart">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-card-id="2" data-price="120">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?auto=format&fit=crop&w=400&q=80" alt="Nike Air Force">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nike Air Force 1</h3>
+                        <p class="category">Unisex Shoes</p>
+                        <div class="product-footer">
+                            <span class="price">$120</span>
+                            <button class="add-to-cart">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-card-id="3" data-price="140">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=400&q=80" alt="Nike Runner">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nike Pegasus</h3>
+                        <p class="category">Running Shoes</p>
+                        <div class="product-footer">
+                            <span class="price">$140</span>
+                            <button class="add-to-cart">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-card-id="4" data-price="250">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=400&q=80" alt="Nike Running">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nike ZoomX Vaporfly</h3>
+                        <p class="category">Professional Running</p>
+                        <div class="product-footer">
+                            <span class="price">$250</span>
+                            <button class="add-to-cart">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-card-id="5" data-price="180">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=400&q=80" alt="Nike Invincible">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nike Invincible 3</h3>
+                        <p class="category">Road Running</p>
+                        <div class="product-footer">
+                            <span class="price">$180</span>
+                            <button class="add-to-cart">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-card-id="6" data-price="200">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&fit=crop&w=400&q=80" alt="Nike Basketball">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nike LeBron XXI</h3>
+                        <p class="category">Basketball Shoes</p>
+                        <div class="product-footer">
+                            <span class="price">$200</span>
+                            <button class="add-to-cart">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-card-id="7" data-price="190">
+                    <div class="product-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGyOcr11WKhE3CGnXvRtva8rTsHfu4K1u3ijcdJDMi8Q&s=10" alt="Nike Jordan">
+                    </div>
+                    <div class="product-info">
+                        <h3>Air Jordan Retro High</h3>
+                        <p class="category">Basketball Classics</p>
+                        <div class="product-footer">
+                            <span class="price">$190</span>
+                            <button class="add-to-cart">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-card-id="8" data-price="115">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=400&q=80" alt="Nike Dunks">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nike Dunk Low Retro</h3>
+                        <p class="category">Lifestyle Shoes</p>
+                        <div class="product-footer">
+                            <span class="price">$115</span>
+                            <button class="add-to-cart">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-card-id="9" data-price="105">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=400&q=80" alt="Nike Blazer">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nike Blazer Mid '77</h3>
+                        <p class="category">Vintage Style</p>
+                        <div class="product-footer">
+                            <span class="price">$105</span>
+                            <button class="add-to-cart">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-card-id="10" data-price="130">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=400&q=80" alt="Nike SB">
+                    </div>
+                    <div class="product-info">
+                        <h3>Nike SB Dunk Low Pro</h3>
+                        <p class="category">Skateboarding</p>
+                        <div class="product-footer">
+                            <span class="price">$130</span>
+                            <button class="add-to-cart">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="history" class="content-section section-box">
+            <div class="section-container">
+                <div class="section-text">
+                    <span class="section-tag">OFFICIAL FOUNDATION DATA</span>
+                    <h2 class="section-title">Nike Kampaniyasi Tarixi</h2>
+                    <p>Nike kompaniyasi aniq kim tomonidan, qachon va qayerda tashkil etilgani haqida to'liq ma'lumotlar:</p>
+                    <div class="info-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">1964</span>
+                            <span class="stat-label">Yil (25-Yanvar)</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Eugene, OR</span>
+                            <span class="stat-label">Oregon, AQSh</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Phil & Bill</span>
+                            <span class="stat-label">Asoschilar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="Nike Foundation">
+                </div>
+            </div>
+        </section>
+
+        <section id="running" class="content-section section-box alt-bg">
+            <div class="section-container reverse">
+                <div class="section-text">
+                    <span class="section-tag">HERITAGE & INNOVATION</span>
+                    <h2 class="section-title">Running Revolution (1972)</h2>
+                    <p>Nike yugurish poyabzallari tarixi 1972-yilda Oregon shtatida boshlangan. Hammuassis Bill Bowerman oshxonasidagi vafli pishirgichga rezina quyib, birinchi "Waffle Sole" poshnasini o'ylab topgan.</p>
+                    <div class="info-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">1972</span>
+                            <span class="stat-label">Yilda Yaratilgan</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Oregon</span>
+                            <span class="stat-label">AQSh, Boshlanish Nuktasi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=600&q=80" alt="Nike Running Heritage">
+                </div>
+            </div>
+        </section>
+
+        <section id="basketball" class="content-section section-box">
+            <div class="section-container">
+                <div class="section-text">
+                    <span class="section-tag">LEGENDARY ERA</span>
+                    <h2 class="section-title">Basketball Legacy (1982 - 1985)</h2>
+                    <p>1982-yilda Nike havo yostiqchali "Air Force 1" modelini taqdim etdi. 1985-yilda esa Maykl Jordan bilan hamkorlikda afsonaviy Air Jordan 1 yaratildi va basketbol madaniyatini abadiy o'zgartirdi.</p>
+                    <div class="info-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">1982</span>
+                            <span class="stat-label">Air Force 1 Debyuti</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Chicago</span>
+                            <span class="stat-label">Air Jordan Afsonasi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrYsu8PeQqkdFSsHzsK09_QPjCnhMDn6wyiM7rewNLFg&s=10" alt="Nike Basketball History">
+                </div>
+            </div>
+        </section>
+
+        <section id="lifestyle" class="content-section section-box alt-bg">
+            <div class="section-container reverse">
+                <div class="section-text">
+                    <span class="section-tag">URBAN CULTURE</span>
+                    <h2 class="section-title">Streetwear Expansion (1987)</h2>
+                    <p>1987-yilda dizayner Tinker Hatfield tomonidan Air Max 1 yaratildi. Parijdagi Pompidou Markazidan ilhomlanib, poyabzal ichidagi havo kapsulasini tashqi tomondan ko'rinadigan qildi.</p>
+                    <div class="info-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">1987</span>
+                            <span class="stat-label">Air Max 1 Yaratilishi</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Paris</span>
+                            <span class="stat-label">Dizayn Ilhom Manbai</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80" alt="Nike Lifestyle">
+                </div>
+            </div>
+        </section>
+
+        <section id="skateboarding" class="content-section section-box">
+            <div class="section-container">
+                <div class="section-text">
+                    <span class="section-tag">BOARD CULTURE</span>
+                    <h2 class="section-title">Nike SB Era (2002)</h2>
+                    <p>2002-yilda Nike rasman skeytbording olamiga kirib keldi. Dunk Low modelini yangilab, qalin tilcha va Zoom Air patagini qo'shib SB Dunk liniyasini taqdim etdi.</p>
+                    <div class="info-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">2002</span>
+                            <span class="stat-label">Nike SB Tashkil Topdi</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">California</span>
+                            <span class="stat-label">Skeyt Jamiyati Markazi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?auto=format&fit=crop&w=600&q=80" alt="Nike SB History">
+                </div>
+            </div>
+        </section>
+
+        <section id="training" class="content-section section-box alt-bg">
+            <div class="section-container reverse">
+                <div class="section-text">
+                    <span class="section-tag">CROSS TRAINING</span>
+                    <h2 class="section-title">Cross-Training Dominance (1987)</h2>
+                    <p>Bo Jackson bilan hamkorlikda yaratilgan Nike Air Trainer 1 zali va har qanday sport turi uchun universal poyabzal sifatida 1987-yilda inqilob qildi.</p>
+                    <div class="info-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">1987</span>
+                            <span class="stat-label">Cross-Training Inqilobi</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Bo Jackson</span>
+                            <span class="stat-label">Afsonaviy Atlet</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1579338559194-a162d19bf842?auto=format&fit=crop&w=600&q=80" alt="Nike Training">
+                </div>
+            </div>
+        </section>
+
+        <section id="kids" class="content-section section-box">
+            <div class="section-container">
+                <div class="section-text">
+                    <span class="section-tag">NEXT GENERATION</span>
+                    <h2 class="section-title">Young Athletes Line</h2>
+                    <p>Nike bolalar va o'smirlar uchun maxsus moslashuvchan, yengil va mustahkam modellarini rivojlantirib kelmoqda. Bu yosh sportchilar uchun xavfsiz harakatni ta'minlaydi.</p>
+                    <div class="info-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">Safety</span>
+                            <span class="stat-label">Yuksak Himoya</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Flexibility</span>
+                            <span class="stat-label">Yengil Harakat</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=600&q=80" alt="Nike Kids">
+                </div>
+            </div>
+        </section>
+
+        <section id="sale" class="content-section section-box alt-bg">
+            <div class="section-container reverse">
+                <div class="section-text">
+                    <span class="section-tag">EXCLUSIVE DEALS</span>
+                    <h2 class="section-title">Special Clearance Events</h2>
+                    <p>Mavsumiy chegirmalar va eksklyuziv takliflar orqali Nike eng so'nggi texnologiyalarni har bir mijoz uchun hamyonbop qiladi.</p>
+                    <div class="info-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">50% Off</span>
+                            <span class="stat-label">Maxfiy Chegirmalar</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">Global</span>
+                            <span class="stat-label">Dunyo Bo'ylab Haridorlar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1512374382149-233c42b6a83b?auto=format&fit=crop&w=600&q=80" alt="Nike Offers">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section section-box">
+            <div class="about-container">
+                <h2 class="section-title">The Foundation of Nike (1964)</h2>
+                <p class="about-desc">Nike kompaniyasi 1964-yil 25-yanvarda Oregon shtatining Yevgeniy (Eugene) shahrida Phil Knight va Bill Bowerman tomonidan "Blue Ribbon Sports" nomi bilan tashkil etilgan. 1971-yil 30-mayda kompaniya rasman "Nike, Inc." nomiga o'zgartirilgan. Ilhom manbai Gretsiya g'alaba ma'budasi Nika hisoblanadi.</p>
+                <div class="info-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">1964</span>
+                        <span class="stat-label">Asos Solingan Yil</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">Eugene, OR</span>
+                        <span class="stat-label">Tashkil Topgan Joyi</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">Phil & Bill</span>
+                        <span class="stat-label">Asoschilar</span>
+                    </div>
+                </div>
+                <div class="about-actions">
+                    <button class="btn btn-primary" id="about-read-more">Learn More</button>
+                </div>
+                <div class="hidden-content" id="hidden-content">
+                    <h3>Qo'shimcha Global Ma'lumotlar</h3>
+                    <p>Nike o'zining innovatsion texnologiyalari, jumladan Air yostiqchalari, Flyknit matolari va barqaror rivojlanish dasturlari bilan dunyodagi №1 sport brendiga aylandi. Bugungi kunda kompaniya millionlab sportchilar va yoshlarga o'z salohiyatini ochishda yordam bermoqda. Sifat va dizayn har doim birinchi o'rinda turadi.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Featured Links</h3>
+                <ul>
+                    <li><a href="#shop">Air Force 1</a></li>
+                    <li><a href="#shop">Jordan Air</a></li>
+                    <li><a href="#shop">Air Max 90</a></li>
+                    <li><a href="#shop">Blazer</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Shoes</h3>
+                <ul>
+                    <li><a href="#shop">All Shoes</a></li>
+                    <li><a href="#shop">Custom Shoes</a></li>
+                    <li><a href="#shop">Running Shoes</a></li>
+                    <li><a href="#shop">Basketball Shoes</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Clothing</h3>
+                <ul>
+                    <li><a href="#training">All Clothing</a></li>
+                    <li><a href="#lifestyle">Hoodies & Pullovers</a></li>
+                    <li><a href="#training">Shirts & Tops</a></li>
+                    <li><a href="#training">Jackets</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Kids</h3>
+                <ul>
+                    <li><a href="#kids">Infant & Toddler Shoes</a></li>
+                    <li><a href="#kids">Kids Shoes</a></li>
+                    <li><a href="#kids">Kids Jordan Shoes</a></li>
+                    <li><a href="#kids">Kids Basketball Shoes</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>About Nike</h3>
+                <ul>
+                    <li><a href="#about">News</a></li>
+                    <li><a href="#about">Careers</a></li>
+                    <li><a href="#about">Investors</a></li>
+                    <li><a href="#about">Sustainability</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nike, Inc. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
